@@ -86,7 +86,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 async function getStaticPaths() {
-    const res = await fetch("https://fakestoreapi.com/products");
+    const res = await fetch("https://fakestoreapi.com/products/");
     const data = await res.json();
     const paths = data.map((clotheItem)=>{
         return {

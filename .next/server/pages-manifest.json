@@ -5,7 +5,7 @@
   "/404": "pages/404.html",
   "/about": "pages/about.html",
   "/clothes/[id]": "pages/clothes/[id].js",
-  "/reviews": "pages/reviews.js",
   "/": "pages/index.js",
-  "/clothes": "pages/clothes.js"
+  "/clothes": "pages/clothes.js",
+  "/reviews": "pages/reviews.js"
 }
