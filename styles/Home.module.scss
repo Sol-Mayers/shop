@@ -1,0 +1,113 @@
+@import "breakpoints";
+
+.title {
+    color: #000000;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 200;
+    font-size: 40px;
+}
+.text {
+    text-align: center;
+    font-size: 18px;
+}
+.btn {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    margin: 40px auto 0px auto;
+    background: deepskyblue;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+.mainImage {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    flex-grow: 1;
+    padding: 0 30px;
+    box-sizing: border-box;
+    @media (min-width: $middle) {
+        justify-content: flex-end;
+    }
+}
+.containerMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    flex-grow: 1;
+    padding: 0 30px;
+    box-sizing: border-box;
+    @media (min-width: $middle) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.bd {
+    width: 100%;
+    height: auto;
+}
+.headerStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+@media (min-width: 660px) {
+    .headerStyle {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+.upperWrapper {
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.mainTextWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 30px;
+    @media (min-width: $middle) {
+        width: 48%;
+    }
+}
+.padText {
+    margin-top: 20px;
+}
+.footerInner {
+    padding: 20px 0px;
+    display: flex;
+}
+.mainErrorWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 30px;
+}

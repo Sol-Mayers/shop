@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Balsamiq+Sans:wght@400;700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext&effect=fire-animation|neon|outline");
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #2e2e2e;
+    font-family: "Prata";
+    font-weight: 400;
+    background-size: 200px;
+    background-color: #ffffff;
+    line-height: 1.6;
+    background-image: url("/images/back-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+a {
+    text-decoration: none;
+}
+h1,
+h2,
+p,
+body {
+    margin: 0;
+    padding: 0;
+}
+.content {
+    width: 100%;
+    max-width: 960px;
+    height: 100vh;
+    margin: 0 auto;
+    box-shadow: rgb(0 0 0 / 4%) 0px 0px 5px 3px;
+    border: 5px solid white;
+    box-sizing: border-box;
+    background: #fff;
+    background-image: url(/images/back-min.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+button {
+    padding: 0;
+    margin: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header svg {
+    font-size: 50px;
+    color: #ffffff;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav a {
+    color: #ffffff;
+    font-size: 20px;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    background-color: #ffffff;
+    margin-top: 50px;
+    flex-shrink: 0;
+}
+.not-found {
+    text-align: center;
+}
+.not-found a {
+    color: #48b5dc;
+    text-decoration: underline;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+/* Scroll Bar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #48b5dc #ffffff;
+}
+
+/* для Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+}
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #48b5dc;
+    border-radius: 5px;
+    border: 3px solid #ffffff;
+}

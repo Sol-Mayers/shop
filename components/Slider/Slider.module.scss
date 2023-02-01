@@ -1,0 +1,40 @@
+@import "/styles/breakpoints";
+
+.sliderWrapper {
+    width: 100%;
+}
+.mainSlider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 30px;
+    overflow-x: hidden;
+    @media (min-width: $middle) {
+        width: 48%;
+    }
+}
+.swiperImageWrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.sliderImage {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+.sliderTitle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.swiperTitleProduct {
+    text-align: center;
+    margin-top: 20px;
+}

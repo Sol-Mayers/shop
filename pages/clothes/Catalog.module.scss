@@ -1,0 +1,100 @@
+@import "/styles/breakpoints";
+
+.productWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    color: #000000;
+    box-shadow: 0px 0px 10px 0px gray;
+    background-color: #ffffff;
+}
+.productDesc {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    overflow-wrap: break-word;
+}
+@media (min-width: 660px) {
+    .productWrap {
+        flex-direction: row;
+    }
+    .product {
+        width: 48%;
+    }
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    flex-grow: 1;
+    padding: 0;
+    box-sizing: border-box;
+    @media (min-width: $middle) {
+        justify-content: flex-end;
+        padding: 0 30px;
+    }
+}
+.mainTextWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-top: 30px;
+}
+.productImage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.innerImage {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.innerImageItem {
+    height: auto;
+    width: 300px;
+    object-fit: contain;
+    display: flex;
+    align-self: center;
+}
+.titleProduct {
+    margin-bottom: 30px;
+}
+.productItemDesc {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.whiteBack {
+    background-color: #ffffff;
+}
+.productItemWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
