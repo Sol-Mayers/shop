@@ -33,7 +33,7 @@ const Reviews = ({ reviews }) => {
     );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const response = await fetch(
         "https://jsonplaceholder.typicode.com/comments"
     );

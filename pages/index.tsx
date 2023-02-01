@@ -33,8 +33,8 @@ export default function Home({ clothes }) {
     );
 }
 
-export async function getServerSideProps(context) {
-    const res = await fetch("https://fakestoreapi.com/products");
+export async function getStaticProps(context) {
+    const res = await fetch("https://fakestoreapi.com/products?limit=3");
     const clothes = await res.json();
 
     return {

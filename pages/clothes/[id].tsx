@@ -4,6 +4,32 @@ import Head from "next/head";
 import styles from "./Catalog.module.scss";
 import cn from "classnames";
 
+export async function getStaticPaths() {
+    const res = await fetch("https://fakestoreapi.com/products");
+    const data = await res.json();
+
+    const paths = data.map((clotheItem) => {
+        return {
+            params: { id: clotheItem.id.toString() },
+        };
+    });
+
+    return {
+        paths,
+        fallback: false,
+    };
+}
+
+export async function getStaticProps(context) {
+    const id = context.params.id;
+    const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+    const data = await res.json();
+
+    return {
+        props: { clotheItem: data },
+    };
+}
+
 const Clothes = ({ clotheItem }) => {
     return (
         <>
@@ -36,14 +62,5 @@ const Clothes = ({ clotheItem }) => {
         </>
     );
 };
-
-export async function getServerSideProps({ params }) {
-    const res = await fetch(`https://fakestoreapi.com/products/${params.id}`);
-    const clotheItem = await res.json();
-
-    return {
-        props: { clotheItem },
-    };
-}
 
 export default Clothes;
