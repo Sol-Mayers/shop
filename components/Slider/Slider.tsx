@@ -7,9 +7,10 @@ import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import "swiper/scss/autoplay";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Slider.module.scss";
 
-const Slider: FC<ClothesProps> = ({ clothes }) => {
+const Slider: FC<ClothesProps> = ({ clothes, mainLink }) => {
     return (
         <div className={styles.mainSlider}>
             <h2 className={styles.sliderTitle}>Последние новинки</h2>
@@ -28,18 +29,23 @@ const Slider: FC<ClothesProps> = ({ clothes }) => {
                     {clothes.slice(0, 3).map((product) => {
                         return (
                             <SwiperSlide key={product.id}>
-                                <div className={styles.swiperImageWrap}>
-                                    <Image
-                                        src={product.image}
-                                        alt="slide"
-                                        width="200"
-                                        height="200"
-                                        className={styles.sliderImage}
-                                    />
-                                </div>
-                                <h2 className={styles.swiperTitleProduct}>
-                                    {product.title}
-                                </h2>
+                                <Link
+                                    className={styles.swiperLink}
+                                    href={`${mainLink}${"/"}${product.id}`}
+                                >
+                                    <div className={styles.swiperImageWrap}>
+                                        <Image
+                                            src={product.image}
+                                            alt="slide"
+                                            width="200"
+                                            height="200"
+                                            className={styles.sliderImage}
+                                        />
+                                    </div>
+                                    <h2 className={styles.swiperTitleProduct}>
+                                        {product.title}
+                                    </h2>
+                                </Link>
                             </SwiperSlide>
                         );
                     })}

@@ -183,7 +183,7 @@ const Footer = ()=>{
     return /*#__PURE__*/ jsx_runtime_.jsx("footer", {
         children: /*#__PURE__*/ jsx_runtime_.jsx("div", {
             className: (Home_module_default()).footerInner,
-            children: "Copyright 2022 - inStyle"
+            children: "Copyright 2023 - inStyle"
         })
     });
 };

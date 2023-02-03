@@ -111,6 +111,17 @@ async function getStaticProps(context) {
     };
 }
 const Clothes = ({ clotheItem  })=>{
+    // const addProduct = (product: any) => {
+    //     localStorage.setItem(
+    //         `${"inStyle_product__"}${clotheItem.id}`,
+    //         JSON.stringify(product)
+    //     );
+    //     console.log(localStorage);
+    // };
+    // const clearCart = () => {
+    //     localStorage.clear();
+    //     console.log(localStorage);
+    // };
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_3___default()), {

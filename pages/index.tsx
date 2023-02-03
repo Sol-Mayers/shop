@@ -27,14 +27,14 @@ export default function Home({ clothes }) {
                         Перейти в каталог
                     </Link>
                 </div>
-                <Slider clothes={clothes} />
+                <Slider clothes={clothes} mainLink="/clothes" />
             </div>
         </>
     );
 }
 
 export async function getStaticProps(context) {
-    const res = await fetch("https://fakestoreapi.com/products?limit=3");
+    const res = await fetch("https://fakestoreapi.com/products");
     const clothes = await res.json();
 
     return {

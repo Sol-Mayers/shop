@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState, useEffect } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
@@ -53,7 +53,6 @@ const Catalog = ({ clothes }) => {
 export async function getStaticProps() {
     const res = await fetch("https://fakestoreapi.com/products");
     const clothes = await res.json();
-
     return {
         props: { clothes },
     };

@@ -10,4 +10,5 @@ export type ClothesProps = {
             rating: { rate: number; count: number };
         }
     ];
+    mainLink?: string;
 };

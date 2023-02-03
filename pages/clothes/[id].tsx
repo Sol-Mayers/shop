@@ -31,6 +31,18 @@ export async function getStaticProps(context) {
 }
 
 const Clothes = ({ clotheItem }) => {
+    // const addProduct = (product: any) => {
+    //     localStorage.setItem(
+    //         `${"inStyle_product__"}${clotheItem.id}`,
+    //         JSON.stringify(product)
+    //     );
+    //     console.log(localStorage);
+    // };
+    // const clearCart = () => {
+    //     localStorage.clear();
+    //     console.log(localStorage);
+    // };
+
     return (
         <>
             <Head>
@@ -56,6 +68,12 @@ const Clothes = ({ clotheItem }) => {
                         <p>
                             <b>{`${clotheItem.price} ${"руб."}`}</b>
                         </p>
+                        {/* <button onClick={() => addProduct(clotheItem)}>
+                            В корзину
+                        </button>
+                        <button onClick={() => clearCart()}>
+                            очистить корзину
+                        </button> */}
                     </div>
                 </div>
             </div>

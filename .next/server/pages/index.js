@@ -14,7 +14,8 @@ module.exports = {
 	"swiperImageWrap": "Slider_swiperImageWrap__eSzSG",
 	"sliderImage": "Slider_sliderImage__d4ZJa",
 	"sliderTitle": "Slider_sliderTitle__xrgmm",
-	"swiperTitleProduct": "Slider_swiperTitleProduct__z88k_"
+	"swiperTitleProduct": "Slider_swiperTitleProduct__z88k_",
+	"swiperLink": "Slider_swiperLink__inicB"
 };
 
 
@@ -67,8 +68,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var swiper_scss_autoplay__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(swiper_scss_autoplay__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(5675);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _Slider_module_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(6809);
-/* harmony import */ var _Slider_module_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_Slider_module_scss__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(1664);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _Slider_module_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(6809);
+/* harmony import */ var _Slider_module_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_Slider_module_scss__WEBPACK_IMPORTED_MODULE_10__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([swiper_react__WEBPACK_IMPORTED_MODULE_2__, swiper__WEBPACK_IMPORTED_MODULE_3__]);
 ([swiper_react__WEBPACK_IMPORTED_MODULE_2__, swiper__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
@@ -81,16 +84,17 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([swip
 
 
 
-const Slider = ({ clothes  })=>{
+
+const Slider = ({ clothes , mainLink  })=>{
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-        className: (_Slider_module_scss__WEBPACK_IMPORTED_MODULE_9___default().mainSlider),
+        className: (_Slider_module_scss__WEBPACK_IMPORTED_MODULE_10___default().mainSlider),
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
-                className: (_Slider_module_scss__WEBPACK_IMPORTED_MODULE_9___default().sliderTitle),
+                className: (_Slider_module_scss__WEBPACK_IMPORTED_MODULE_10___default().sliderTitle),
                 children: "Последние новинки"
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: (_Slider_module_scss__WEBPACK_IMPORTED_MODULE_9___default().sliderWrapper),
+                className: (_Slider_module_scss__WEBPACK_IMPORTED_MODULE_10___default().sliderWrapper),
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(swiper_react__WEBPACK_IMPORTED_MODULE_2__.Swiper, {
                     modules: [
                         swiper__WEBPACK_IMPORTED_MODULE_3__.Navigation,
@@ -108,23 +112,27 @@ const Slider = ({ clothes  })=>{
                         delay: 3000
                     },
                     children: clothes.slice(0, 3).map((product)=>{
-                        return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(swiper_react__WEBPACK_IMPORTED_MODULE_2__.SwiperSlide, {
-                            children: [
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                    className: (_Slider_module_scss__WEBPACK_IMPORTED_MODULE_9___default().swiperImageWrap),
-                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_8___default()), {
-                                        src: product.image,
-                                        alt: "slide",
-                                        width: "200",
-                                        height: "200",
-                                        className: (_Slider_module_scss__WEBPACK_IMPORTED_MODULE_9___default().sliderImage)
+                        return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(swiper_react__WEBPACK_IMPORTED_MODULE_2__.SwiperSlide, {
+                            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_9___default()), {
+                                className: (_Slider_module_scss__WEBPACK_IMPORTED_MODULE_10___default().swiperLink),
+                                href: `${mainLink}${"/"}${product.id}`,
+                                children: [
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                        className: (_Slider_module_scss__WEBPACK_IMPORTED_MODULE_10___default().swiperImageWrap),
+                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_8___default()), {
+                                            src: product.image,
+                                            alt: "slide",
+                                            width: "200",
+                                            height: "200",
+                                            className: (_Slider_module_scss__WEBPACK_IMPORTED_MODULE_10___default().sliderImage)
+                                        })
+                                    }),
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
+                                        className: (_Slider_module_scss__WEBPACK_IMPORTED_MODULE_10___default().swiperTitleProduct),
+                                        children: product.title
                                     })
-                                }),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
-                                    className: (_Slider_module_scss__WEBPACK_IMPORTED_MODULE_9___default().swiperTitleProduct),
-                                    children: product.title
-                                })
-                            ]
+                                ]
+                            })
                         }, product.id);
                     })
                 })
@@ -207,7 +215,8 @@ function Home({ clothes  }) {
                         ]
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Slider_Slider__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
-                        clothes: clothes
+                        clothes: clothes,
+                        mainLink: "/clothes"
                     })
                 ]
             })
@@ -215,7 +224,7 @@ function Home({ clothes  }) {
     });
 }
 async function getStaticProps(context) {
-    const res = await fetch("https://fakestoreapi.com/products?limit=3");
+    const res = await fetch("https://fakestoreapi.com/products");
     const clothes = await res.json();
     return {
         props: {
