@@ -12,3 +12,8 @@ export type ClothesProps = {
     ];
     mainLink?: string;
 };
+
+export type CartProps = {
+    clicked: boolean;
+    state: () => void;
+};

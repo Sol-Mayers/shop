@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import styles from "./Catalog.module.scss";
+import AddProduct from "../../components/AddProduct/AddProduct";
 import cn from "classnames";
 
 export async function getStaticPaths() {
     const res = await fetch("https://fakestoreapi.com/products/");
     const data = await res.json();
 
-    const paths = data.map((clotheItem) => {
+    const paths = data.map((clotheItem: { id: { toString: () => any } }) => {
         return {
             params: { id: clotheItem.id.toString() },
         };
@@ -20,7 +21,7 @@ export async function getStaticPaths() {
     };
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps(context: { params: { id: any } }) {
     const id = context.params.id;
     const res = await fetch(`https://fakestoreapi.com/products/${id}`);
     const data = await res.json();
@@ -31,18 +32,6 @@ export async function getStaticProps(context) {
 }
 
 const Clothes = ({ clotheItem }) => {
-    // const addProduct = (product: any) => {
-    //     localStorage.setItem(
-    //         `${"inStyle_product__"}${clotheItem.id}`,
-    //         JSON.stringify(product)
-    //     );
-    //     console.log(localStorage);
-    // };
-    // const clearCart = () => {
-    //     localStorage.clear();
-    //     console.log(localStorage);
-    // };
-
     return (
         <>
             <Head>
@@ -68,12 +57,12 @@ const Clothes = ({ clotheItem }) => {
                         <p>
                             <b>{`${clotheItem.price} ${"руб."}`}</b>
                         </p>
-                        {/* <button onClick={() => addProduct(clotheItem)}>
+                        <button
+                            onClick={() => AddProduct(clotheItem)}
+                            className={styles.addButton}
+                        >
                             В корзину
                         </button>
-                        <button onClick={() => clearCart()}>
-                            очистить корзину
-                        </button> */}
                     </div>
                 </div>
             </div>

@@ -684,6 +684,11 @@ caniuse-lite@^1.0.30001406:
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001449.tgz#a8d11f6a814c75c9ce9d851dc53eb1d1dfbcd657"
   integrity sha512-CPB+UL9XMT/Av+pJxCKGhdx+yg1hzplvFJQlJ2n68PyQGMz9L/E2zCyLdOL8uasbouTUgnPl+y0tccI/se+BEw==
 
+cart-localstorage@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/cart-localstorage/-/cart-localstorage-1.1.5.tgz#7fdd0ef7cfdea113276a59b9e79a5826181acb4e"
+  integrity sha512-1LsiGklIV9bRj4qnT21HHMG6AGBzfH5Xu611H4FaNklx5Y7vq8vecKGMW9oxDpjoCga/NWAQ0mj/tYqfgTLqeg==
+
 chalk@^2.0.0:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
@@ -2631,6 +2636,11 @@ negotiator@0.6.3, negotiator@^0.6.2, negotiator@^0.6.3:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   integrity sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==
 
+next-redux-wrapper@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/next-redux-wrapper/-/next-redux-wrapper-8.1.0.tgz#d9c135f1ceeb2478375bdacd356eb9db273d3a07"
+  integrity sha512-2hIau0hcI6uQszOtrvAFqgc0NkZegKYhBB7ZAKiG3jk7zfuQb4E7OV9jfxViqqojh3SEHdnFfPkN9KErttUKuw==
+
 next@^13.1.2:
   version "13.1.6"
   resolved "https://registry.yarnpkg.com/next/-/next-13.1.6.tgz#054babe20b601f21f682f197063c9b0b32f1a27c"
@@ -3095,6 +3105,11 @@ react-redux@^8.0.5:
     hoist-non-react-statics "^3.3.2"
     react-is "^18.0.0"
     use-sync-external-store "^1.0.0"
+
+react-use-cart@^1.13.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/react-use-cart/-/react-use-cart-1.13.0.tgz#af7f4306612bdb9c7563e59fbee299ee2f8fe278"
+  integrity sha512-V3jrNOgBXxTn/RWh1HCEdrQk/jx2xCixdkX1c7Vyl4zxEf9jOuniUnjZSTALO7rQ5226onqmvXxKz1eu0Yz6Iw==
 
 react@^18.2.0:
   version "18.2.0"
