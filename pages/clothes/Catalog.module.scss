@@ -115,6 +115,7 @@
     width: 100%;
     cursor: pointer;
     font-family: "Prata";
+    position: relative;
     &:hover {
         box-shadow: 0px 0px 5px 0px gray;
     }
@@ -125,4 +126,18 @@
         width: 300px;
         align-self: center;
     }
+}
+.checkedIcon {
+    position: absolute;
+    left: 20px;
+    top: 12px;
+    opacity: 1;
+    transition: opacity 1s;
+}
+.hideIcon {
+    position: absolute;
+    left: 20px;
+    top: 12px;
+    opacity: 0;
+    transition: opacity 1s;
 }

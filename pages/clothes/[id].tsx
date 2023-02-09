@@ -32,6 +32,13 @@ export async function getStaticProps(context: { params: { id: any } }) {
 }
 
 const Clothes = ({ clotheItem }) => {
+    const [icon, setIcon] = useState(false);
+
+    let fullyAdded = () => {
+        AddProduct(clotheItem);
+        setIcon(true);
+        setTimeout(() => setIcon(false), 2000);
+    };
     return (
         <>
             <Head>
@@ -58,9 +65,18 @@ const Clothes = ({ clotheItem }) => {
                             <b>{`${clotheItem.price} ${"руб."}`}</b>
                         </p>
                         <button
-                            onClick={() => AddProduct(clotheItem)}
+                            onClick={() => fullyAdded()}
                             className={styles.addButton}
                         >
+                            <Image
+                                src="/images/checked.svg"
+                                width="25"
+                                height="25"
+                                alt="checked"
+                                className={
+                                    icon ? styles.checkedIcon : styles.hideIcon
+                                }
+                            />
                             В корзину
                         </button>
                     </div>

@@ -9,11 +9,27 @@ import cn from "classnames";
 const Navbar = () => {
     const [nav, setNav] = useState(false);
     const [clicked, setClicked] = useState(false);
+    const [empty, setEmpty] = useState(true);
 
     const openCart = () => {
         setNav(false);
         setClicked(true);
     };
+
+    useEffect(() => {
+        window.addEventListener("storage", () => {
+            const items = JSON.parse(localStorage.getItem("cart"));
+            if (items) {
+                setEmpty(false);
+            }
+        });
+        window.addEventListener("storage-clear", () => {
+            const items = JSON.parse(localStorage.getItem("cart"));
+            if (!items) {
+                setEmpty(true);
+            }
+        });
+    }, []);
 
     return (
         <nav className={styles.box}>
@@ -56,7 +72,11 @@ const Navbar = () => {
                 </li>
                 <li className={styles.listItem}>
                     <button
-                        className={cn(styles.dropdownButton, styles.link)}
+                        className={cn(
+                            styles.dropdownButton,
+                            styles.link,
+                            styles.giftWrap
+                        )}
                         onClick={() => openCart()}
                     >
                         <Image
@@ -73,6 +93,15 @@ const Navbar = () => {
                             height="30"
                             className={styles.cart}
                         />
+                        {!empty && (
+                            <Image
+                                src="/images/present.svg"
+                                alt="gift"
+                                width="10"
+                                height="10"
+                                className={styles.present}
+                            />
+                        )}
                     </button>
                 </li>
             </ul>
